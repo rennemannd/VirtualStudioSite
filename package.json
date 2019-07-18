@@ -3,10 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-anime": "^2.2.0",
+    "react-art": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
+    "react-native": "^0.60.3",
+    "react-native-web": "^0.11.5",
+    "react-particles-js": "^2.6.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1"
+    "react-router-native": "^5.0.1",
+    "react-scripts": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-spring": "^8.0.27"
   }
 }

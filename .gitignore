@@ -2,6 +2,7 @@
 
 # IDE ignores
 .idea/
+.idea.*
 
 
 # dependencies
