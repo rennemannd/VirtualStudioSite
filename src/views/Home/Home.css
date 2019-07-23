@@ -1,16 +1,3 @@
-.anim {
-    width: 50%;
-}
-
-.anim svg {
-    width: 100%;
-    border: 1px solid red;
-}
-
-.anim path {
-    stroke-width: 2;
-}
-
 .svg {
     width: auto;
     height: auto;
@@ -71,7 +58,7 @@
 #particles canvas {
     background: linear-gradient(to bottom, #09203f   0%,#537895  100%);
     position: fixed;
-    z-index: -3;
+    z-index: -10;
 }
 
 a {

@@ -1,8 +1,19 @@
-.about-us {
-  background: linear-gradient(to bottom, #09203f   0%,#537895  100%);
-  position: fixed;
-  width: 100%;
-  height: 100%;
+@keyframes animateHeight {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 708px;
+  }
+}
+
+@keyframes reverseAnimateHeight {
+  0% {
+    height: 708px;
+  }
+  100% {
+    height: 0;
+  }
 }
 
 .card {
@@ -10,18 +21,42 @@
   float: left;
   top: 50%;
   left: 50%;
-  border-radius: 2px;
+  border-radius: 10px;
   display: inline-block;
-  height: 708px;
   margin: 1rem;
   width: 63.33333333%;
   transform: translate(-50%, 16%);
-  background: rgba(98, 113, 132, .45);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background: #eeeded;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+  -webkit-animation: 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) animateHeight;
+  -moz-animation: 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) animateHeight;
+  -o-animation: 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) animateHeight;
+  animation: 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) animateHeight; /* easeOutQuart */
+  height: 708px;
 }
 
 .content {
-  position: relative;
+  padding: 7%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+  font-family: 'Poppins', Calibri, sans-serif;
+  height: 75%;
+}
+
+.divider {
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "oswaldextralight", Calibri, sans-serif;
+  font-size: 50pt;
 }
 
 .circle {
