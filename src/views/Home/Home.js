@@ -33,7 +33,6 @@ class Home extends React.Component {
                 <div className="divider"/>
                 <NavLink to={"/about"}>
                     <a className="button">
-
                         About Us
                     </a>
                 </NavLink>

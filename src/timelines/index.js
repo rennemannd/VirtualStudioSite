@@ -1,4 +1,4 @@
-import {TimelineMax as Timeline, Power1} from 'gsap';
+import {Power1, TimelineMax as Timeline} from 'gsap';
 
 const getDefaultTimeline = (node, delay) => {
     const timeline = new Timeline({paused: true});
@@ -9,6 +9,19 @@ const getDefaultTimeline = (node, delay) => {
         .from(node, 0, {display: 'none', autoAlpha: 0, delay, ease: Power1.easeIn})
         .from(content, .7, {autoAlpha: 0, y: 15, ease: Power1.easeInOut}, 0.125)
         .from(text, .7, {autoAlpha: 0, y: -15, ease: Power1.easeInOut}, 0.125);
+
+    return timeline;
+};
+
+const getNotFoundTimeline = (node, delay) => {
+    const timeline = new Timeline({paused: true});
+    if (node != null) {
+        const content = node.querySelector('div');
+
+        timeline
+            .from(node, 0, {display: 'none', autoAlpha: 0, delay, ease: Power1.easeIn})
+            .from(content, .7, {autoAlpha: 0, y: 15, ease: Power1.easeInOut}, 0.125);
+    }
 
     return timeline;
 };
@@ -28,13 +41,14 @@ export const play = (pathname, node, appears) => {
     const delay = appears ? 0 : 0.5;
     let timeline;
 
-    console.log(pathname);
+    console.log("pathname: " + pathname);
 
-    if (pathname === '/' || pathname === "")
+    if (pathname === '/')
         timeline = getHomeTimeline(node, delay);
-    else if (pathname === "/not-found" || pathname === "not-found")
-        return;
-    else timeline = getDefaultTimeline(node, delay);
+    else if (pathname === "/not-found")
+        timeline = getNotFoundTimeline(node, delay);
+    else
+        timeline = getDefaultTimeline(node, delay);
 
     window.loadPromise.then(() => requestAnimationFrame(() => timeline.play()))
 };

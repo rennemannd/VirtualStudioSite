@@ -1,11 +1,11 @@
 import React from 'react';
 import Home from './views/Home/Home';
-import NotFound from './views/NotFound/NotFound';
-import {Route, Switch, Redirect, BrowserRouter, withRouter} from 'react-router-dom';
+import {Route, Switch, Redirect, BrowserRouter} from 'react-router-dom';
 import AboutUs from "./views/AboutUs/AboutUs";
 import {Transition, TransitionGroup} from "react-transition-group";
 import {exit, play} from "./timelines";
 import Particles from "react-particles-js";
+import NotFound from "./views/NotFound/NotFound";
 
 let particlesOptions = {
     "particles": {
@@ -53,24 +53,6 @@ let particlesOptions = {
     "retina_detect": false
 };
 
-@withRouter
-class App extends React.Component {
-
-    static propTypes = {
-        location: React.PropTypes.object.isRequired
-    };
-
-    componentDidUpdate(prevProps) {
-        if (this.props.location.pathname !== prevProps.location.pathname) {
-            this.onRouteChanged();
-        }
-    }
-
-    onRouteChanged() {
-
-    }
-}
-
 // This exports the different routes that will be used on the page
 export const Routes = () => {
     return (
@@ -82,21 +64,21 @@ export const Routes = () => {
                 <Switch>
                     <Route render={({location}) => {
                         const {pathname, key} = location;
-                        let re = /(^\/$|^\/about$|^\/not-found$)/i;
-                        const valid = re.test(pathname);
+                        const valid = ["/about", "/", "/not-found"].includes(pathname);
+                        console.log(pathname + "," + valid);
                         return (
                             <TransitionGroup component={null}>
                                 <Transition
                                     key={key}
                                     appear={true}
-                                    onEnter={(node, appears) => {play(pathname, node, appears)}}
+                                    onEnter={(node, appears) => {play(valid ? pathname : "/not-found", node, appears)}}
                                     onExit={(node, appears) => exit(node, appears)}
                                     timeout={{enter: 750, exit: 150}}>
                                     <Switch location={location}>
                                         <Route exact path="/" component={Home}/>
                                         <Route path="/about" component={AboutUs}/>
                                         <Route path="/not-found" component={NotFound}/>
-                                        <Redirect from='*' to='/not-found'/>
+                                        <Redirect from={"*"} to={"/not-found"}/>
                                     </Switch>
                                 </Transition>
                             </TransitionGroup>

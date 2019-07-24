@@ -1,11 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class NotFound extends Component {
+class NotFound extends React.Component {
+    constructor(props) {
+        super(props);
+        this.myRef = React.createRef();
+    }
     render() {
         return (
-            <div>
-                Page not found
-            </div>
+                <body>
+                    <div style={{"textAlign": "center", "color": "white"}}>
+                        Not Found
+                    </div>
+                </body>
         )
     }
 }
