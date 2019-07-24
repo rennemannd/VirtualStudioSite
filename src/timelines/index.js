@@ -28,10 +28,13 @@ export const play = (pathname, node, appears) => {
     const delay = appears ? 0 : 0.5;
     let timeline;
 
+    console.log(pathname);
+
     if (pathname === '/' || pathname === "")
         timeline = getHomeTimeline(node, delay);
-    else
-        timeline = getDefaultTimeline(node, delay);
+    else if (pathname === "/not-found" || pathname === "not-found")
+        return;
+    else timeline = getDefaultTimeline(node, delay);
 
     window.loadPromise.then(() => requestAnimationFrame(() => timeline.play()))
 };

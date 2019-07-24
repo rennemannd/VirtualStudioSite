@@ -60,6 +60,7 @@ class AboutUs extends Component {
                 <div className={"card"}>
                     <span className={"content"}>
                         <h1 className={"header"}>Virtual Studio</h1>
+                        <h3 className={"subheader"}>About Us</h3>
                         <hr width={"90%"} align={"center"}/>
                             <div className="divider"/>
                                  Our goal at Virtual Studio is to bring you the highest quality content for whatever videos you require. Need a music video? We've got you covered. Want to tell people about your new business with an explainer video? Come on in! Want a cool action video full of guns and booms and things? You bet. Whatever video you need, we'll make it better.

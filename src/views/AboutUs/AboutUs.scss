@@ -22,8 +22,9 @@
   top: 50%;
   left: 50%;
   border-radius: 10px;
-  display: inline-block;
+  display: flex;
   margin: 1rem;
+  align-items: center;
   width: 63.33333333%;
   transform: translate(-50%, 16%);
   background: #eeeded;
@@ -38,7 +39,7 @@
 
 .content {
   padding: 7%;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
@@ -57,6 +58,16 @@
   flex-direction: column;
   font-family: "oswaldextralight", Calibri, sans-serif;
   font-size: 50pt;
+}
+
+.subheader {
+  font-family: "oswaldextra-light", Calibri, sans-serif;
+  align-self: center;
+  width: 10%;
+  font-size: 12pt;
+  padding: 5px;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,.27);
 }
 
 .circle {

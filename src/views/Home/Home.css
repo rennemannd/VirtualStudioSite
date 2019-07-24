@@ -84,7 +84,7 @@ a {
 }
 
 .button {
-    transform: translateY(150%);
+    transform: translate(6.5%, 150%);
     display: inline-block;
     padding: 12px 24px;
     border: 1px solid #ffffff;
@@ -93,6 +93,8 @@ a {
     position: relative;
     overflow: hidden;
     z-index: 2;
+    font-family: Poppins, Calibri, sans-serif;
+    font-size: 11.4pt;
 }
 
 .button:before {

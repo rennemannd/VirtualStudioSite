@@ -19,7 +19,7 @@ targets: ['line', 'circle', 'polygon', 'polyline', 'path', 'rect'],
 
 class Home extends React.Component {
 
-    componentDidMount () {
+    componentDidMount() {
     }
 
     render() {
@@ -27,27 +27,34 @@ class Home extends React.Component {
             <html>
             <body>
             <div className="button-container">
-                <a href={"#"} className="button">
-                    Home
+                <a href="#" className="button">
+                        Home
                 </a>
                 <div className="divider"/>
-                <a className="button">
-                    <NavLink to={"/about"}>
+                <NavLink to={"/about"}>
+                    <a className="button">
+
                         About Us
-                    </NavLink>
-                </a>
+                    </a>
+                </NavLink>
                 <div className="divider"/>
-                <a href="#" className="button">
-                    Gallery
-                </a>
+                <NavLink to={"/gallery"}>
+                    <a className="button">
+                        Gallery
+                    </a>
+                </NavLink>
                 <div className="divider"/>
-                <a href="#" className="button">
-                    Team
-                </a>
+                <NavLink to={"/team"}>
+                    <a className="button">
+                        Team
+                    </a>
+                </NavLink>
                 <div className="divider"/>
-                <a href="#" className="button">
-                    Contact Us
-                </a>
+                <NavLink to={"/contact"}>
+                    <a className="button">
+                        Contact Us
+                    </a>
+                </NavLink>
             </div>
 
             <div className={'container'}>
