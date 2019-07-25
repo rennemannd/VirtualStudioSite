@@ -78,7 +78,7 @@ export const Routes = () => {
                                         <Route exact path="/" component={Home}/>
                                         <Route path="/about" component={AboutUs}/>
                                         <Route path="/not-found" component={NotFound}/>
-                                        <Redirect from={"*"} to={"/not-found"}/>
+                                        <Redirect from={"*"} to={"/not-found"} component={NotFound}/>
                                     </Switch>
                                 </Transition>
                             </TransitionGroup>

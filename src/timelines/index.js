@@ -50,12 +50,15 @@ export const play = (pathname, node, appears) => {
     else
         timeline = getDefaultTimeline(node, delay);
 
+    console.log("isNull: " + timeline === null);
+
     window.loadPromise.then(() => requestAnimationFrame(() => timeline.play()))
 };
 
 export const exit = (node) => {
     const timeline = new Timeline({paused: true});
 
-    timeline.to(node, 0.15, {autoAlpha: 0, ease: Power1.easeOut});
+    if (node != null)
+        timeline.to(node, 0.15, {autoAlpha: 0, ease: Power1.easeOut});
     timeline.play();
 };
