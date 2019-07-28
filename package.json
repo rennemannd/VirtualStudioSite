@@ -18,10 +18,18 @@
     "react-router-native": "^5.0.1",
     "react-scripts": "^3.0.1",
     "react-transition-group": "latest",
-    "typekit": "^0.1.1"
+    "typekit": "^0.1.1",
+    "letteringjs": "^0.7.0",
+    "animate.css": "^3.7.2",
+    "textillate": "^0.4.1"
   },
   "plugins": [
-    ["@babel/plugin-proposal-decorators", { "legacy": true }]
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ]
   ],
   "scripts": {
     "start": "react-scripts start",

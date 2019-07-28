@@ -6,6 +6,7 @@ import {Transition, TransitionGroup} from "react-transition-group";
 import {exit, play} from "./timelines";
 import Particles from "react-particles-js";
 import NotFound from "./views/NotFound/NotFound";
+import Team from "./views/Team/Team";
 
 let particlesOptions = {
     "particles": {
@@ -64,7 +65,7 @@ export const Routes = () => {
                 <Switch>
                     <Route render={({location}) => {
                         const {pathname, key} = location;
-                        const valid = ["/about", "/", "/not-found"].includes(pathname);
+                        const valid = ["/about", "/", "/not-found", "/team"].includes(pathname);
                         console.log(pathname + "," + valid);
                         return (
                             <TransitionGroup component={null}>
@@ -78,6 +79,7 @@ export const Routes = () => {
                                         <Route exact path="/" component={Home}/>
                                         <Route path="/about" component={AboutUs}/>
                                         <Route path="/not-found" component={NotFound}/>
+                                        <Route path={"/team"} component={Team}/>
                                         <Redirect from={"*"} to={"/not-found"} component={NotFound}/>
                                     </Switch>
                                 </Transition>

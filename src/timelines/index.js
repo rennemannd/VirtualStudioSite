@@ -13,10 +13,14 @@ const getDefaultTimeline = (node, delay) => {
     return timeline;
 };
 
+const getTeamTimeline = (node, delay) => {
+    return new Timeline({paused: true});
+};
+
 const getNotFoundTimeline = (node, delay) => {
     const timeline = new Timeline({paused: true});
     if (node != null) {
-        const content = node.querySelector('div');
+        const content = node.querySelector('span');
 
         timeline
             .from(node, 0, {display: 'none', autoAlpha: 0, delay, ease: Power1.easeIn})
@@ -47,6 +51,8 @@ export const play = (pathname, node, appears) => {
         timeline = getHomeTimeline(node, delay);
     else if (pathname === "/not-found")
         timeline = getNotFoundTimeline(node, delay);
+    else if (pathname === "/team")
+        timeline = getTeamTimeline(node, delay);
     else
         timeline = getDefaultTimeline(node, delay);
 
