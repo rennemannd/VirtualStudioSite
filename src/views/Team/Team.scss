@@ -9,6 +9,48 @@
 }
 
 /**
+  Fade-in animation
+ */
+@mixin animation($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+
+  @-o-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+    transform: (rotateY(-2deg) rotateX(-2deg));
+  }
+
+  100% {
+    opacity: 1;
+    transform: (rotateY(0deg) rotateX(0deg));
+  }
+
+}
+
+/**
+  End Fade-in animation
+ */
+
+/**
   Flip animation
  */
 
@@ -42,7 +84,7 @@
 /* Style the back side */
 .flip-card-back {
   transform: rotateY(180deg);
-  background: linear-gradient(to bottom, #6161a2   0%,transparent  100%);
+  background: #3e3e85;
   border-radius: 10px;
 }
 
@@ -71,7 +113,7 @@
 .card-container {
   background-color: transparent;
   border-radius: 10px;
-  box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
   color: #B3B8CD;
   padding-top: 0px;
   position: relative;
@@ -80,6 +122,22 @@
   height: 450px;
   text-align: center;
   margin-right: 20px;
+  margin-bottom: 20px;
+
+  opacity: 0;
+  animation-name: (fadeInCard);
+  animation-duration: (1s);
+  animation-timing-function: (ease);
+  animation-iteration-count: (1);
+  animation-direction: (normal);
+  animation-delay: (0s);
+  animation-fill-mode: (forwards);
+  @for $i from 1 through 20 {
+    &:nth-of-type(#{$i}) {
+      $delay: 0.125 * $i;
+    animation-delay: (#{$delay}s);
+    }
+  }
 }
 
 .card-container .pro {
@@ -90,8 +148,8 @@
   font-weight: bold;
   padding: 3px 7px;
   position: relative;
-  top: 15px;
-  left: -110px;
+  top: 20px;
+  left: -120px;
 }
 
 .card-container .round {
@@ -105,8 +163,10 @@
 
 .skills {
   background-color: transparent;
-  text-align: left;
-  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-self: center;
   margin-top: 0;
 }
 
@@ -123,29 +183,4 @@
   font-size: 16px;
   margin: 0 7px 7px 0;
   padding: 7px;
-}
-
-footer {
-  background-color: #222;
-  color: #fff;
-  font-size: 14px;
-  bottom: 0;
-  position: fixed;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 999;
-}
-
-footer p {
-  margin: 10px 0;
-}
-
-footer i {
-  color: red;
-}
-
-footer a {
-  color: #3c97bf;
-  text-decoration: none;
 }
