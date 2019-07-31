@@ -19,9 +19,6 @@ targets: ['line', 'circle', 'polygon', 'polyline', 'path', 'rect'],
 
 class Home extends React.Component {
 
-    componentDidMount() {
-    }
-
     render() {
         return (
             <html>

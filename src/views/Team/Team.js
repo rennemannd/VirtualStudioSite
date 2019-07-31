@@ -14,6 +14,9 @@ class Team extends React.Component {
     render() {
         return (
             <html>
+            <head>
+                <title>Team</title>
+            </head>
             <NavLink to={""} onClick={this.Delay} className={"circCont"}>
                 <button className="circle" data-animation="showShadow" data-remove="3000"/>
             </NavLink>
@@ -66,7 +69,7 @@ class Team extends React.Component {
                             <h6 className={"h6"}>Australia</h6>
                             <p className={"p"}>
                                 Lead video editor and <br/>
-                                video editing management.
+                                video editing manager.
                             </p>
                         </div>
                         <div className={"flip-card-back"}>
@@ -100,7 +103,7 @@ class Team extends React.Component {
                             <h6 className={"h6"}>Florida</h6>
                             <p className={"p"}>
                                 Full-stack development and <br/>
-                                film score music composition.
+                                film score music composer.
                             </p>
                         </div>
                         <div className={"flip-card-back"}>
@@ -144,8 +147,8 @@ class Team extends React.Component {
                             <h3 className={"h3"}>Samuel</h3>
                             <h6 className={"h6"}>U.K.</h6>
                             <p className={"p"}>
-                                 Editor, VFX, and<br/>
-                                animation.
+                                Editing, VFX, and<br/>
+                                animator.
                             </p>
                         </div>
                         <div className={"flip-card-back"}>
@@ -212,7 +215,7 @@ class Team extends React.Component {
                             <h3 className={"h3"}>Tom</h3>
                             <h6 className={"h6"}>U.S.A.</h6>
                             <p className={"p"}>
-                                CEO, video editor, and <br/>
+                                CEO, video editing, and <br/>
                                 lead manager.
                             </p>
                         </div>
