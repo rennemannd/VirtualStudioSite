@@ -19,9 +19,6 @@ targets: ['line', 'circle', 'polygon', 'polyline', 'path', 'rect'],
 
 class Home extends React.Component {
 
-    componentDidMount() {
-    }
-
     render() {
         return (
             <html>
@@ -51,7 +48,7 @@ class Home extends React.Component {
                 <div className="divider"/>
                 <NavLink to={"/contact"}>
                     <a className="button">
-                        Contact Us
+                        Contact
                     </a>
                 </NavLink>
             </div>
