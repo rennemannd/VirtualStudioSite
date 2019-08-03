@@ -48,7 +48,7 @@ class Home extends React.Component {
                 <div className="divider"/>
                 <NavLink to={"/contact"}>
                     <a className="button">
-                        Contact Us
+                        Contact
                     </a>
                 </NavLink>
             </div>

@@ -6,6 +6,7 @@ import James from "./Images/Headshots/James.jpg";
 import Tom from "./Images/Headshots/Tom.jpg";
 import Yavuz from "./Images/Headshots/Yavuz.png";
 import Samuel from "./Images/Headshots/Samuel.jpg";
+import Matt from "./Images/Headshots/Matt.jpg";
 import "./Team.scss";
 import {NavLink} from "react-router-dom";
 
@@ -251,6 +252,40 @@ class Team extends React.Component {
                             <p className={"p"}>
                                 Lead musician <br/>
                                 and composer.
+                            </p>
+                        </div>
+                        <div className={"flip-card-back"}>
+                            <div className="skills">
+                                <h3>Skills</h3>
+                                <ul>
+                                    <li>UI / UX</li>
+                                    <li>Front End Development</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>React</li>
+                                    <li>Node</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/*Matt's card*/}
+                <div className="card-container">
+                    <div className={"flip-card-inner"}>
+                        <div className={"flip-card-front"}>
+                            <span className="pro">SOC</span>
+                            <div className={"image"}>
+                                <img
+                                    className="round"
+                                    src={Matt}
+                                    alt="user"/>
+                            </div>
+                            <h3 className={"h3"}>Matt</h3>
+                            <h6 className={"h6"}>Washington</h6>
+                            <p className={"p"}>
+                                Social media <br/>
+                                manager.
                             </p>
                         </div>
                         <div className={"flip-card-back"}>

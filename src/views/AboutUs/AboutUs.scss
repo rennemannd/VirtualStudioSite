@@ -16,6 +16,21 @@
   }
 }
 
+.desc-wrapper {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+.desc {
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: .65px;
+  box-sizing: border-box;
+}
+
 .card {
   position: relative;
   float: left;
