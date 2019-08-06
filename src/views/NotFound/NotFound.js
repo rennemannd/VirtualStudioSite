@@ -7,7 +7,7 @@ class NotFound extends React.Component {
     render() {
         return (
             <html>
-            <NavLink to={""} onClick={this.Delay} className={"circCont"}>
+            <NavLink to={""} onClick={this.ErrorRemove} className={"circCont"}>
                 <button className="circle" data-animation="showShadow" data-remove="3000"/>
             </NavLink>
             <div className="denied__wrapper">

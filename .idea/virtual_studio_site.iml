@@ -16,5 +16,8 @@
     <orderEntry type="library" name="modernizr" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="20ab91acc4" level="application" />
+    <orderEntry type="library" name="api" level="application" />
+    <orderEntry type="library" name="email" level="application" />
+    <orderEntry type="library" name="20ab91acc4" level="application" />
   </component>
 </module>

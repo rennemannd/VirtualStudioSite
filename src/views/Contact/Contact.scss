@@ -7,18 +7,84 @@
   transform: translateY(10%);
 }
 
+.checkMark {
+  width: 50px;
+  display: block;
+  margin: 0 auto 0;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+
+  &.circle {
+    -webkit-animation: dash .9s ease-in-out;
+    animation: dash .9s ease-in-out;
+  }
+
+  &.line {
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash .9s .35s ease-in-out forwards;
+    animation: dash .9s .35s ease-in-out forwards;
+  }
+
+  &.check {
+    stroke-dashoffset: -100;
+    -webkit-animation: dash-check .9s .35s ease-in-out forwards;
+    animation: dash-check .9s .35s ease-in-out forwards;
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+
 $textHeight: 50px;
 $letterSize: 25px;
 $wordLength: 4;
 $animationDuration: .5s;
 $animationInterval: .1s;
 .cascading-text {
-  height : $textHeight;
+  height: $textHeight;
   line-height: $textHeight;
-  padding : 10px;
+  padding: 10px;
+
   &__letter {
     font-size: $letterSize;
-    display : inline-block;
+    display: inline-block;
     opacity: 0;
     animation-name: fade;
     @for $i from 1 through $wordLength {
@@ -47,6 +113,31 @@ $animationInterval: .1s;
   letter-spacing: 6px;
   color: #d9f3ff;
   margin: 0 auto 25px;
+}
+
+.error-message {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.error-message:hover {
+  color: black;
+}
+
+.error-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  width: 30%;
+  color: white;
+  margin: 15px auto 5px;
 }
 
 .contact-wrapper {

@@ -18,7 +18,7 @@ class Team extends React.Component {
             <head>
                 <title>Team</title>
             </head>
-            <NavLink to={""} onClick={this.Delay} className={"circCont"}>
+            <NavLink to={""} onClick={this.ErrorRemove} className={"circCont"}>
                 <button className="circle" data-animation="showShadow" data-remove="3000"/>
             </NavLink>
             <div className={"primary-container"}>

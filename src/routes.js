@@ -66,7 +66,7 @@ export const Routes = () => {
                 <Switch>
                     <Route render={({location}) => {
                         const {pathname, key} = location;
-                        const valid = ["/about", "/", "/not-found", "/team", "/contact"].includes(pathname);
+                        const valid = ["/about", "/", "/not-found", "/team", "/contact", "/login"].includes(pathname);
                         console.log(pathname + "," + valid);
                         return (
                             <TransitionGroup component={null}>
