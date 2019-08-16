@@ -51,7 +51,7 @@ export const play = (pathname, node, appears) => {
         timeline = getHomeTimeline(node, delay);
     else if (pathname === "/not-found")
         timeline = getNotFoundTimeline(node, delay);
-    else if (pathname === "/team")
+    else if (pathname === "/team" || pathname === '/gallery')
         timeline = getTeamTimeline(node, delay);
     else
         timeline = getDefaultTimeline(node, delay);

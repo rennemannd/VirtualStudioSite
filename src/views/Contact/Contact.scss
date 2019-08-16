@@ -115,6 +115,9 @@ $animationInterval: .1s;
   margin: 0 auto 25px;
 }
 
+.error-text {
+}
+
 .error-message {
   margin-left: 15px;
   color: white;
@@ -124,6 +127,7 @@ $animationInterval: .1s;
   line-height: 20px;
   cursor: pointer;
   transition: 0.3s;
+  box-sizing: border-box;
 }
 
 .error-message:hover {
@@ -131,8 +135,7 @@ $animationInterval: .1s;
 }
 
 .error-wrapper {
-  display: flex;
-  flex-direction: row-reverse;
+  text-align: left;
   padding: 20px;
   background-color: #f44336; /* Red */
   width: 30%;

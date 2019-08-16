@@ -1,0 +1,128 @@
+.gallery-container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.gallery-header {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 35px;
+  font: 300 60px 'Oswald', sans-serif;
+  letter-spacing: 6px;
+  color: #d9f3ff;
+  margin: 0 auto 25px;
+}
+
+.heading {
+  display: block;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* Compensate for excess margin on outer gallery flex items */
+  margin: -1rem -1rem;
+
+  opacity: 0;
+  animation-name: (fadeInCard);
+  animation-duration: (1s);
+  animation-timing-function: (ease);
+  animation-iteration-count: (1);
+  animation-direction: (normal);
+  animation-delay: (0s);
+  animation-fill-mode: (forwards);
+}
+
+.gallery-hr {
+  display: block;
+  position: relative;
+  margin: 0 auto 0;
+  border: 0;
+  width: 85%;
+  border-top: 1px solid #e4ca01;
+  height: 1px;
+}
+
+.gallery-item {
+  /* Minimum width of 24rem and grow to fit available space */
+  flex: 1 0 24rem;
+  /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+  margin: 1rem;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.credits {
+  display: inline-block;
+  position: absolute;
+  transform: translate(10px, -15px);
+  font: 200 14px 'Oswald', sans-serif;
+  color: #d9f3ff;
+}
+
+.music-credits {
+  display: inline-block;
+  position: absolute;
+  transform: translate(-7px, -67px);
+  font: 200 14px 'Oswald', sans-serif;
+  color: #d9f3ff;
+}
+
+.gallery-audio {
+  display: flex;
+  flex-direction: column;
+  margin-top: -25px;
+}
+
+.audio-player {
+  margin-bottom: 3rem;
+}
+
+.audio-player path {
+  fill: #000;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
+}
+
+.gallery-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  top: 0;
+  left: 0;
+  transition: tranform 400ms ease-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling.
+
+*/
+
+@supports (display: grid) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-gap: 2rem;
+  }
+
+  .gallery,
+  .gallery-item {
+    margin: 0;
+  }
+}

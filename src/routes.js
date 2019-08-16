@@ -8,6 +8,7 @@ import Particles from "react-particles-js";
 import NotFound from "./views/NotFound/NotFound";
 import Team from "./views/Team/Team";
 import Contact from "./views/Contact/Contact";
+import Gallery from "./views/Gallery/Gallery";
 
 let particlesOptions = {
     "particles": {
@@ -66,8 +67,8 @@ export const Routes = () => {
                 <Switch>
                     <Route render={({location}) => {
                         const {pathname, key} = location;
-                        const valid = ["/about", "/", "/not-found", "/team", "/contact", "/login"].includes(pathname);
-                        console.log(pathname + "," + valid);
+                        const valid = ["/about", "/", "/not-found", "/team", "/contact", "/login", "/gallery"].includes(pathname);
+                        console.log(pathname, ",", valid);
                         return (
                             <TransitionGroup component={null}>
                                 <Transition
@@ -79,6 +80,7 @@ export const Routes = () => {
                                     <Switch location={location}>
                                         <Route exact path="/" component={Home}/>
                                         <Route path="/about" component={AboutUs}/>
+                                        <Route path="/gallery" component={Gallery}/>
                                         <Route path="/not-found" component={NotFound}/>
                                         <Route path={"/team"} component={Team}/>
                                         <Route path={"/contact"} component={Contact}/>

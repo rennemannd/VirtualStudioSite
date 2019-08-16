@@ -224,13 +224,10 @@ class Team extends React.Component {
                             <div className="skills">
                                 <h3>Skills</h3>
                                 <ul>
-                                    <li>UI / UX</li>
-                                    <li>Front End Development</li>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>React</li>
-                                    <li>Node</li>
+                                    <li>Premiere Pro</li>
+                                    <li>Photoshop</li>
+                                    <li>Managing</li>
+                                    <li>Marketing</li>
                                 </ul>
                             </div>
                         </div>

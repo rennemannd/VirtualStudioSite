@@ -9,9 +9,6 @@ import $ from "jquery";
 
 class Contact extends React.Component {
 
-    grecaptchaObject = window.grecaptcha;
-    recapRef = React.createRef();
-
     constructor(props, context) {
         super(props, context);
         this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
@@ -42,7 +39,8 @@ class Contact extends React.Component {
     verifyCallback(recaptchaToken) {
         console.log(recaptchaToken, "<= tkn");
         this.setState({
-            captcha: true
+            captcha: true,
+            tkn: recaptchaToken
         });
     }
 
@@ -69,7 +67,7 @@ class Contact extends React.Component {
     errorMessage(text) {
         return (
             <div className={"error-wrapper"}><span className={"error-message"} onClick={this.ErrorRemove}>&times;</span>
-                {text}</div>);
+                <span className={"error-text"}>{text}</span></div>);
     }
 
     static getSVG() {
@@ -108,7 +106,7 @@ class Contact extends React.Component {
         else if (this.state.senderName.trim() === '')
             return this.errorMessage("Please enter a name!");
         else if (this.state.feedback.trim().length < 16)
-            return this.errorMessage("Please enter a message of at least 16 characters!")
+            return this.errorMessage("Please enter a message of at least 16 characters!");
         else if (!this.state.captcha)
             return this.errorMessage("Please complete the reCaptcha!");
 
@@ -147,7 +145,8 @@ class Contact extends React.Component {
                 {
                     "name": name,
                     "senderEmail": senderEmail,
-                    "feedback": feedback
+                    "feedback": feedback,
+                    "g-recaptcha-response": this.state.tkn
                 }, "user_emGxeLP1KLlsbsbA0Jpic")
                 .then(() => {
                         this.setState({formEmailSent: true});
@@ -155,6 +154,10 @@ class Contact extends React.Component {
                 )
                 .catch(err => {
                     console.error('Failed to send feedback. Error: ', err);
+                    this.setState({
+                        missingCredentials: true,
+                        credentialValue: this.errorMessage("Uh, that's not right... Something went wrong when you tried to send your message.")
+                    });
                 })
         } else
             this.setState({
@@ -167,7 +170,7 @@ class Contact extends React.Component {
         return (
             <html>
             <div>
-                <NavLink to={""} onClick={this.ErrorRemove} className={"circCont"}>
+                <NavLink to={""} onClick={this.Delay} className={"circCont"}>
                     <button className="circle" data-animation="showShadow" data-remove="3000"/>
                 </NavLink>
                 <head>
@@ -191,10 +194,7 @@ class Contact extends React.Component {
                 </head>
 
                 <section id="contact">
-
                     <div className="contact-wrapper">
-
-
                         <h1 className="section-header">CONTACT</h1>
                         {
                             this.state.formEmailSent && this.state.triedAgain ? this.hasSubmittedMessage() : (this.state.missingCredentials ? this.state.credentialValue : null)
@@ -212,13 +212,14 @@ class Contact extends React.Component {
                         <div className={"form-container"}>
                             <form className="form-horizontal" role="form" method="POST">
 
-                                <input type="text" className="input-forms" id="name" placeholder="NAME" name="name"
+                                <input type="text" className="input-forms" id="name" placeholder="Name" name="name"
                                        onChange={evt => this.updateName(evt)}/>
 
-                                <input type="email" className="input-forms" id="email" placeholder="EMAIL"
+                                <input type="email" className="input-forms" id="email" placeholder="E-mail"
                                        name="email" onChange={evt => this.updateEmail(evt)}/>
 
-                                <textarea className="form-control" rows="10" placeholder="MESSAGE" name="message"
+                                <textarea className="form-control" rows="10"
+                                          placeholder="Your message of at least 16 characters..." name="message"
                                           style={{"min-width": "400px", "min-height": "200px", "max-height": "400px"}}
                                           onChange={evt => this.updateFeedback(evt)}/>
 
@@ -275,18 +276,30 @@ class Contact extends React.Component {
 
                             <hr className="hr"/>
                             <ul className="social-media-list">
+                                {/*Facebook*/}
                                 <li><a href="#" target="_blank" className="contact-icon">
                                     <i className="fa fa-facebook" aria-hidden="true"/></a>
                                 </li>
-                                <li><a href="#" target="_blank" className="contact-icon">
-                                    <i className="fa fa-instagram" aria-hidden="true"/></a>
-                                </li>
-                                <li><a href="#" target="_blank" className="contact-icon">
-                                    <i className="fa fa-twitter" aria-hidden="true"/></a>
-                                </li>
-                                <li><a href="#" target="_blank" className="contact-icon">
-                                    <i className="fa fa-discord" aria-hidden="true"/></a>
-                                </li>
+                                {/*Instagram*/}
+                                <a href="https://instagram.com/virtualstudioart" target="_blank">
+                                    <li><a className="contact-icon">
+                                        <i className="fa fa-instagram" aria-hidden="true"/></a>
+                                    </li>
+                                </a>
+                                {/*Twitter*/}
+                                <a href="https://twitter.com/_VirtualStudio_" target="_blank">
+                                    <li><a href="#" target="_blank" className="contact-icon">
+                                        <i className="fa fa-twitter" aria-hidden="true"/></a>
+                                    </li>
+                                </a>
+                                {/*Discord*/}
+                                <a href="https://discord.gg/MCdgmNz" target="_blank">
+                                    <li>
+                                        <a className="contact-icon">
+                                            <i className="fa fa-discord" aria-hidden="true"/>
+                                        </a>
+                                    </li>
+                                </a>
                             </ul>
                             <hr className="hr"/>
                         </div>
