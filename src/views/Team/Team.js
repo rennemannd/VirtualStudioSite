@@ -229,6 +229,7 @@ class Team extends React.Component {
                                     <li>Managing</li>
                                     <li>Marketing</li>
                                 </ul>
+                                <span className="pro-back">CEO</span>
                             </div>
                         </div>
                     </div>
@@ -237,7 +238,7 @@ class Team extends React.Component {
                 <div className="card-container">
                     <div className={"flip-card-inner"}>
                         <div className={"flip-card-front"}>
-                            <span className="pro">LMU</span>
+                            <span className="pro">MMC</span>
                             <div className={"image"}>
                                 <img
                                     className="round"
@@ -247,7 +248,7 @@ class Team extends React.Component {
                             <h3 className={"h3"}>James</h3>
                             <h6 className={"h6"}>U.S.A.</h6>
                             <p className={"p"}>
-                                Lead musician <br/>
+                                Music manager <br/>
                                 and composer.
                             </p>
                         </div>

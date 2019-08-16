@@ -261,10 +261,10 @@ class Contact extends React.Component {
 
                             <ul className="contact-list">
                                 <li className="list-item"><i className="fa fa-map-marker fa-2x"><span
-                                    className="contact-text place">City | State-name</span></i></li>
+                                    className="contact-text place">Fort Bragg | NC</span></i></li>
 
                                 <li className="list-item"><i className="fa fa-phone fa-2x"><span
-                                    className="contact-text phone"><a href="tel:1-555-555-5555" title="Call us!">+1 (555) 555-5555</a></span></i>
+                                    className="contact-text phone"><a href="tel:1-623-340-2100" title="Call us!">+1 (623) 340-2100</a></span></i>
                                 </li>
 
                                 <li className="list-item"><i className="fa fa-envelope fa-2x"><span
@@ -277,9 +277,11 @@ class Contact extends React.Component {
                             <hr className="hr"/>
                             <ul className="social-media-list">
                                 {/*Facebook*/}
-                                <li><a href="#" target="_blank" className="contact-icon">
-                                    <i className="fa fa-facebook" aria-hidden="true"/></a>
-                                </li>
+                                <a href="https://facebook.com/virtualstudioart" target="_blank">
+                                    <li><a className="contact-icon">
+                                        <i className="fa fa-facebook" aria-hidden="true"/></a>
+                                    </li>
+                                </a>
                                 {/*Instagram*/}
                                 <a href="https://instagram.com/virtualstudioart" target="_blank">
                                     <li><a className="contact-icon">
@@ -288,7 +290,7 @@ class Contact extends React.Component {
                                 </a>
                                 {/*Twitter*/}
                                 <a href="https://twitter.com/_VirtualStudio_" target="_blank">
-                                    <li><a href="#" target="_blank" className="contact-icon">
+                                    <li><a className="contact-icon">
                                         <i className="fa fa-twitter" aria-hidden="true"/></a>
                                     </li>
                                 </a>
