@@ -43,13 +43,18 @@ class Team extends React.Component {
                             <div className="skills">
                                 <h3>Skills</h3>
                                 <ul>
-                                    <li>UI / UX</li>
-                                    <li>Front End Development</li>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>React</li>
-                                    <li>Node</li>
+                                    <li>Cinema 4D</li>
+                                    <li>Modeling</li>
+                                    <li>Rigging</li>
+                                    <li>Weight Painting</li>
+                                    <li>Animation</li>
+                                    <li>Scene Lighting</li>
+                                    <li>Physically Based Simulations</li>
+                                    <li>Xpresso</li>
+                                    <li>After Effects</li>
+                                    <li>Sony Vegas</li>
+                                    <li>Light Editing</li>
+                                    <li>Compositing</li>
                                 </ul>
                             </div>
                         </div>
@@ -77,13 +82,18 @@ class Team extends React.Component {
                             <div className="skills">
                                 <h3>Skills</h3>
                                 <ul>
-                                    <li>UI / UX</li>
-                                    <li>Front End Development</li>
+                                    <li>Premiere Pro</li>
+                                    <li>Photoshop</li>
+                                    <li>After Effects</li>
+                                    <li>IT</li>
+                                    <li>Network Engineering</li>
+                                    <li>Server Management</li>
+                                    <li>Network Security</li>
+                                    <li>AHK</li>
+                                    <li>Java</li>
+                                    <li>Python</li>
                                     <li>HTML</li>
                                     <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>React</li>
-                                    <li>Node</li>
                                 </ul>
                             </div>
                         </div>
@@ -156,13 +166,18 @@ class Team extends React.Component {
                             <div className="skills">
                                 <h3>Skills</h3>
                                 <ul>
-                                    <li>UI / UX</li>
-                                    <li>Front End Development</li>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>React</li>
-                                    <li>Node</li>
+                                    <li>Premiere Pro</li>
+                                    <li>After Effects</li>
+                                    <li>Resolve</li>
+                                    <li>Photoshop</li>
+                                    <li>Lightroom</li>
+                                    <li>InDesign</li>
+                                    <li>Illustrator</li>
+                                    <li>C4D</li>
+                                    <li>Maya</li>
+                                    <li>Mocha</li>
+                                    <li>Nuke</li>
+                                    <li>Auto Pano 360</li>
                                 </ul>
                             </div>
                         </div>
@@ -190,13 +205,13 @@ class Team extends React.Component {
                             <div className="skills">
                                 <h3>Skills</h3>
                                 <ul>
-                                    <li>UI / UX</li>
-                                    <li>Front End Development</li>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>React</li>
-                                    <li>Node</li>
+                                    <li>FL Studio</li>
+                                    <li>Composing</li>
+                                    <li>Piano</li>
+                                    <li>2D Animations</li>
+                                    <li>Drawing</li>
+                                    <li>Digital Design</li>
+                                    <li>After Effects</li>
                                 </ul>
                             </div>
                         </div>
@@ -250,40 +265,6 @@ class Team extends React.Component {
                             <p className={"p"}>
                                 Music manager <br/>
                                 and composer.
-                            </p>
-                        </div>
-                        <div className={"flip-card-back"}>
-                            <div className="skills">
-                                <h3>Skills</h3>
-                                <ul>
-                                    <li>UI / UX</li>
-                                    <li>Front End Development</li>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>React</li>
-                                    <li>Node</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/*Matt's card*/}
-                <div className="card-container">
-                    <div className={"flip-card-inner"}>
-                        <div className={"flip-card-front"}>
-                            <span className="pro">SOC</span>
-                            <div className={"image"}>
-                                <img
-                                    className="round"
-                                    src={Matt}
-                                    alt="user"/>
-                            </div>
-                            <h3 className={"h3"}>Matt</h3>
-                            <h6 className={"h6"}>Washington</h6>
-                            <p className={"p"}>
-                                Social media <br/>
-                                manager.
                             </p>
                         </div>
                         <div className={"flip-card-back"}>

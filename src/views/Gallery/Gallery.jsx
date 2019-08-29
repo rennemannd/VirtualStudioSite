@@ -40,42 +40,42 @@ class Gallery extends React.Component {
                         <h5 className={"credits"}>Work by Deveon</h5>
                         <img className="gallery-image"
                              src={abstract}
-                             alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"/>
+                             alt="Artwork by Deveon"/>
                     </div>
 
                     <div className="gallery-item">
                         <h5 className={"credits"}>Work by Deveon</h5>
                         <img className="gallery-image"
                              src={headless}
-                             alt="sunset behind San Francisco city skyline"/>
+                             alt="Artwork by Deveon"/>
                     </div>
 
                     <div className="gallery-item">
                         <h5 className={"credits"}>Work by Deveon</h5>
                         <img className="gallery-image"
                              src={cog}
-                             alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan"/>
+                             alt="Artwork by Deveon"/>
                     </div>
 
                     <div className="gallery-item">
                         <h5 className={"credits"}>Work by Deveon</h5>
                         <img className="gallery-image"
                              src={blockworld}
-                             alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night"/>
+                             alt="Artwork by Deveon"/>
                     </div>
 
                     <div className="gallery-item">
                         <h5 className={"credits"}>Work by Mufaya</h5>
                         <img className="gallery-image"
                              src={landscape}
-                             alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA"/>
+                             alt="Artwork by Deveon"/>
                     </div>
 
                     <div className="gallery-item">
                         <h5 className={"credits"}>Work by Mufaya</h5>
                         <img className="gallery-image"
                              src={rocket}
-                             alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp"/>
+                             alt="Artwork by Deveon"/>
                     </div>
                 </div>
             </div>
