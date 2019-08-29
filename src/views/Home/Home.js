@@ -22,10 +22,13 @@ class Home extends React.Component {
     render() {
         return (
             <html>
+            <head>
+                <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet"/>
+            </head>
             <body>
             <div className="button-container">
                 <a href="#" className="button">
-                        Home
+                    Home
                 </a>
                 <div className="divider"/>
                 <NavLink to={"/about"}>
@@ -36,7 +39,7 @@ class Home extends React.Component {
                 <div className="divider"/>
                 <NavLink to={"/gallery"}>
                     <a className="button">
-                        Gallery
+                        Our Work
                     </a>
                 </NavLink>
                 <div className="divider"/>
@@ -135,6 +138,7 @@ class Home extends React.Component {
                               d=" M 2302.57 2245.56 C 2309.70 2241.40 2319.77 2242.37 2325.44 2248.60 C 2327.72 2250.58 2329.24 2253.20 2330.71 2255.83 C 2336.02 2255.75 2341.09 2253.81 2346.35 2253.19 C 2346.29 2255.48 2346.29 2257.78 2346.31 2260.10 L 2346.11 2260.85 C 2341.84 2262.54 2336.99 2262.51 2332.54 2263.68 C 2331.22 2267.66 2330.08 2271.72 2327.89 2275.36 C 2324.61 2278.19 2321.28 2281.32 2316.87 2282.20 C 2306.58 2285.13 2295.15 2277.64 2292.85 2267.41 C 2290.51 2259.04 2295.04 2249.63 2302.57 2245.56 Z"/>
                     </g>
                 </svg>
+                <p className={"motto"}>It's your story, we just sell it.</p>
             </div>
             </body>
             </html>

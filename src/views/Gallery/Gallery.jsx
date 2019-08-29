@@ -34,7 +34,7 @@ class Gallery extends React.Component {
                 <title>Gallery</title>
             </head>
             <div className="gallery-container">
-                <h1 className={"gallery-header"}>GALLERY</h1>
+                <h1 className={"gallery-header"}>OUR WORK</h1>
                 <div className="gallery">
                     <div className="gallery-item">
                         <h5 className={"credits"}>Work by Deveon</h5>
