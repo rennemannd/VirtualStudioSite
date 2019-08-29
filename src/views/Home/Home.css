@@ -11,6 +11,19 @@
     z-index: -3;
 }
 
+.motto {
+    font-family: Oswald, Calibri, sans-serif;
+    font-size: 14pt;
+    color: #d9f3ff;
+    z-index: -4;
+    -webkit-animation: fadeInDown2 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeInDown2 2s; /* Firefox < 16 */
+    -ms-animation: fadeInDown2 2s; /* Internet Explorer */
+    -o-animation: fadeInDown2 2s; /* Opera < 12.1 */
+    animation: fadeInDown2 2s;
+    transform: translateY(-400px);
+}
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -68,6 +81,17 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-600px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-400px);
     }
 }
 
